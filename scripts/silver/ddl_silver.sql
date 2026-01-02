@@ -38,9 +38,9 @@ CREATE TABLE silver.crm_sales_details (
 	sls_ord_num NVARCHAR(50),
 	sls_prd_key NVARCHAR(50),
 	sls_cust_id INT,
-	sls_order_dt INT,
-	sls_ship_dt INT,
-	sls_due_dt INT,
+	sls_order_dt DATE,
+	sls_ship_dt DATE,
+	sls_due_dt DATE,
 	sls_sales INT,
 	sls_quantity INT,
 	sls_price INT,
@@ -50,7 +50,7 @@ IF OBJECT_ID ('silver.erp_cust_az12', 'U') IS NOT NULL
 	DROP TABLE silver.erp_cust_az12;
 CREATE TABLE silver.erp_cust_az12 (
 	cid NVARCHAR(50),
-	bdate DATETIME,
+	bdate DATE,
 	gen NVARCHAR(50),
 	dwh_create_date DATETIME2 DEFAULT GETDATE()
 );
